@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
@@ -143,24 +142,15 @@ const Index = () => {
     return (
       <div className="min-h-screen bg-gradient-to-br from-gallery-50 to-academic-100 flex items-center justify-center p-8">
         <div className="text-center max-w-4xl mx-auto animate-fade-in">
-          {/* Logo */}
-          <div className="mb-8 animate-scale-in">
-            <div className="w-24 h-24 mx-auto mb-4 bg-gradient-to-br from-academic-500 to-academic-600 rounded-full flex items-center justify-center shadow-lg">
-              <span className="text-3xl font-bold text-white font-serif">VA</span>
-            </div>
-            <p className="text-gallery-600 font-medium">Laboratorio de Análisis Visual</p>
-          </div>
-
           {/* Title */}
           <h1 className="text-5xl md:text-6xl font-serif font-bold text-gallery-800 mb-6 leading-tight">
-            Análisis de Similitud Composicional de
-            <span className="text-academic-600 block">Transformaciones de Pinturas Impresionistas</span>
+            Análisis de Similitud Composicional
+            <span className="text-academic-600 block">en Pinturas Impresionistas</span>
           </h1>
 
           {/* Subtitle */}
           <p className="text-xl md:text-2xl text-gallery-600 mb-12 leading-relaxed max-w-3xl mx-auto">
-            Un marco automatizado para evaluar los impactos de las transformaciones visuales en la similitud 
-            composicional en obras de arte impresionistas a través de técnicas avanzadas de visión por computadora
+            Resultados de la comparación de transformaciones aplicadas según características visuales de bajo nivel
           </p>
 
           {/* Start Button */}
@@ -170,7 +160,7 @@ const Index = () => {
             className="bg-academic-600 hover:bg-academic-700 text-white px-8 py-4 text-lg font-medium rounded-full shadow-lg transform transition-all duration-300 hover:scale-105 hover:shadow-xl"
           >
             <Play className="mr-2 h-5 w-5" />
-            Comenzar Análisis
+            Comenzar
           </Button>
         </div>
       </div>
@@ -237,12 +227,12 @@ const Index = () => {
                   <img 
                     src={transformation.leftImage} 
                     alt={`${transformation.name} izquierda`}
-                    className="w-full h-20 object-cover rounded"
+                    className="w-full h-20 object-cover rounded aspect-square"
                   />
                   <img 
                     src={transformation.rightImage} 
                     alt={`${transformation.name} derecha`}
-                    className="w-full h-20 object-cover rounded"
+                    className="w-full h-20 object-cover rounded aspect-square"
                   />
                 </div>
                 <p className="text-sm font-medium text-gallery-700 mb-2 text-center">{transformation.name}</p>
